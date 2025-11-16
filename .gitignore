@@ -6,5 +6,8 @@ dist/
 wheels/
 *.egg-info
 
+# Developer notes
+notes.txt
+
 # Virtual environments
 .venv
