@@ -11,3 +11,7 @@ notes.txt
 
 # Virtual environments
 .venv
+
+# Notebook checkpoints
+Notebooks/
+commands.txt

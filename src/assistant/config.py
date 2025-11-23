@@ -5,7 +5,7 @@ import yaml
 from pydantic import BaseModel, Field, SecretStr, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-from assistant.domain.article_models import FeedItem
+from src.assistant.domain.article_models import FeedItem
 
 
 # -----------------------------
@@ -14,10 +14,10 @@ from assistant.domain.article_models import FeedItem
 class SupabaseDBSettings(BaseModel):
     table_name: str = Field(default="substack_articles", description="Supabase table name")
     host: str = Field(default="localhost", description="Database host")
-    name: str = Field(default="postgres", description="Database name")
+    name: str = Field(default="postgres_backend_db", description="Database name")
     user: str = Field(default="postgres", description="Database user")
-    password: SecretStr = Field(default=SecretStr("password"), description="Database password")
-    port: int = Field(default=6543, description="Database port")
+    password: SecretStr = Field(default=SecretStr("postgres123"), description="Database password")
+    port: int = Field(default=5432, description="Database port")
     test_database: str = Field(default="substack_test", description="Test database name")
 
 # -----------------------------
